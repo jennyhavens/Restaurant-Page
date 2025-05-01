@@ -1,11 +1,15 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
+.home-page {
   background-image: url("/images/nordwood-themes-Tmz8FThN_BE-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  min-height: 100vh;
   color: white;
 }
 
@@ -20,8 +24,9 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  gap: 26px;
   padding: 18px;
+  gap: 26px;
+  background-color: green;
 }
 
 button {
@@ -30,6 +35,7 @@ button {
   background-color: white;
   color: red;
   padding: 1rem 2rem;
+  min-width: 200px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -41,23 +47,21 @@ button:hover {
   transform: scale(1.05);
 }
 
-.home-titles {
+.home-page {
   display: flex;
   gap: 180px;
   justify-content: center;
   font-size: 2rem;
-  margin-top: 100px;
 }
 
 .about,
 .contact-info {
   margin: 50px auto;
-  border: 10x solid red;
   width: 65%;
   text-align: center;
   font-size: 1.3em;
   font-weight: bold;
-  color: rgb(255, 254, 253);
+  color: green;
 }
 
 .contact-info p {
@@ -75,6 +79,8 @@ button:hover {
   display: flex;
   gap: 36px;
   justify-content: center;
+  flex-wrap: wrap;
+  color: green;
 }
 
 .menu-card {
@@ -86,4 +92,5 @@ button:hover {
   text-align: center;
   font-size: 1.4em;
   border-radius: 12px;
+  border: 4px solid green;
 }

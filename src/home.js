@@ -1,13 +1,14 @@
 const homePage = document.createElement("div");
+homePage.classList.add("home-page");
 
-const restTitleOne = document.createElement("h1");
-restTitleOne.textContent = "Fresh Food";
-homePage.appendChild(restTitleOne);
+const headLine = document.createElement("h1");
+headLine.classList.add("headline");
+headLine.textContent = "Fresh Food";
+homePage.appendChild(headLine);
 
-const restTitleTwo = document.createElement("h2");
-restTitleTwo.textContent = "picked straight from your garden";
-homePage.appendChild(restTitleTwo);
-
-homePage.classList.add("home-titles");
+const subHeadLine = document.createElement("p");
+subHeadLine.classList.add("sub-headline");
+subHeadLine.textContent = "picked straight from your garden";
+homePage.appendChild(subHeadLine);
 
 export { homePage };

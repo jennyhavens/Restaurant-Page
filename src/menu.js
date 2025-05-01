@@ -83,4 +83,8 @@ for (let category in categories) {
   }
 }
 
+let backgroundPic = document.createElement("img");
+backgroundPic.classList.add("background-pic");
+menuPage.appendChild(backgroundPic);
+
 export { menuPage };
