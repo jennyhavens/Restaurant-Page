@@ -1,17 +1,26 @@
+import bruschettaPic from "../images/bruschettaPic.jpg";
+import eggsPic from "../images/eggsPic.jpg";
+import chipsPic from "../images/chipsPic.jpg";
+import pastaPic from "../images/pastaPic.jpg";
+import chickenPic from "../images/chickenPic.jpg";
+import salmonPic from "../images/salmonPic.jpg";
+import cakePic from "../images/cakePic.jpg";
+import puddingPic from "../images/puddingPic.jpg";
+
 const categories = {
   Appetizers: [
     {
-      image: "",
-      title: "Bruchetta",
+      image: bruschettaPic,
+      title: "Bruschetta",
       price: "$12.00",
     },
     {
-      image: "",
+      image: eggsPic,
       title: "Deviled Eggs",
       price: "10.00",
     },
     {
-      image: "",
+      image: chipsPic,
       title: "Chips and Dip",
       price: "$8.00",
     },
@@ -19,29 +28,29 @@ const categories = {
 
   "Main Course": [
     {
-      image: "",
+      image: pastaPic,
       title: "Pasta Dish",
       price: "$18.00",
     },
     {
-      image: "",
+      image: chickenPic,
       title: "Chicken Dish",
       price: "$22.00",
     },
     {
-      image: "",
-      title: "Seafood Dish",
+      image: salmonPic,
+      title: "Salmon Dish",
       price: "$28.00",
     },
   ],
   Dessert: [
     {
-      image: "",
-      title: "Fresh Strawberry Cake",
+      image: cakePic,
+      title: "Strawberry Cheesecake",
       price: "$10.00",
     },
     {
-      image: "",
+      image: puddingPic,
       title: "Chocolate Pudding",
       price: "$8.00",
     },
@@ -49,7 +58,6 @@ const categories = {
 };
 
 const menuPage = document.createElement("div");
-menuPage.classList.add("menu");
 
 for (let category in categories) {
   let section = document.createElement("div");
@@ -69,22 +77,21 @@ for (let category in categories) {
     card.classList.add("menu-card");
     items.appendChild(card);
 
-    let pic = document.createElement("img");
-    pic.src = food["image"];
-    card.appendChild(pic);
+    let dishPic = document.createElement("img");
+    dishPic.src = food["image"];
+    dishPic.classList.add("dish-pic");
+    card.appendChild(dishPic);
 
-    let name = document.createElement("p");
-    name.textContent = food.title;
-    card.appendChild(name);
+    let dishTitle = document.createElement("p");
+    dishTitle.textContent = food.title;
+    dishTitle.classList.add("dish-title");
+    card.appendChild(dishTitle);
 
-    let price = document.createElement("p");
-    price.textContent = food.price;
-    card.appendChild(price);
+    let dishPrice = document.createElement("p");
+    dishPrice.textContent = food.price;
+    dishPrice.classList.add("dish-price");
+    card.appendChild(dishPrice);
   }
 }
-
-let backgroundPic = document.createElement("img");
-backgroundPic.classList.add("background-pic");
-menuPage.appendChild(backgroundPic);
 
 export { menuPage };

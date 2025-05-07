@@ -2,28 +2,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #eadcdb;
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
-
-.home-page {
-  background-image: url("/images/nordwood-themes-Tmz8FThN_BE-unsplash.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  color: white;
-}
-
-/* img {
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-} */
 
 nav {
   padding: 18px;
-  background-color: green;
+  /* background-color: #123f15; */
+  background-color: #205c2a; /*#4e9a2e; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -36,6 +24,7 @@ nav {
   color: white;
   font-weight: bold;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
 }
 
 .nav-buttons {
@@ -44,70 +33,52 @@ nav {
   grid-column: 3 / 4;
   gap: 18px;
   align-self: center;
-  justify-items: end;
+  background-color: transparent;
 }
 
 button {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
-  background-color: white;
-  color: red;
-  padding: 1rem 2rem;
-  min-width: 200px;
+  background-color: transparent;
+  color: white;
   border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 button:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .home-page {
   display: flex;
-  gap: 180px;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rest-pic {
+  flex: 0;
+  height: 92vh;
+  width: auto;
+}
+
+.head-container {
+  flex: 1;
+  align-self: center;
+  margin: 50px;
 }
 
 .headline {
-  display: flex;
-  flex: wrap;
-  font-size: 120px;
-  margin: auto;
-  color: red;
-}
-
-.sub-headline {
-  display: flex;
-  flex: wrap;
-  font-size: 75px;
-  align-self: center;
-  color: green;
-}
-
-.about,
-.contact-info {
-  margin: 50px auto;
-  width: 65%;
+  font-size: 3em;
   text-align: center;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: green;
-}
-
-.contact-info p {
-  margin: 45px;
+  color: #205c2a;
 }
 
 .menu-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 30px;
+  padding-top: 30px;
 }
 
 .menu-items {
@@ -115,7 +86,7 @@ button:hover {
   gap: 36px;
   justify-content: center;
   flex-wrap: wrap;
-  color: green;
+  color: #205c2a;
 }
 
 .menu-card {
@@ -127,5 +98,74 @@ button:hover {
   text-align: center;
   font-size: 1.4em;
   border-radius: 12px;
-  border: 4px solid green;
+  border: 4px solid #205c2a;
+  background-color: none;
+  gap: 20px;
+}
+
+.dish-title {
+  margin-top: 40px;
+}
+
+.dish-pic {
+  background-position: center;
+  background-size: cover;
+  height: 220px;
+  border-radius: 5px;
+}
+
+.about,
+.contact-info {
+  margin: 50px auto;
+  width: 65%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #205c2a;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.contact-info p {
+  margin: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  nav,
+  .nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .rest-pic {
+    flex: 0;
+    height: 50vh;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .head-container {
+    flex: 1;
+    align-self: center;
+    margin: 50px;
+  }
+
+  .headline {
+    font-size: 2em;
+    text-align: center;
+    color: #205c2a;
+  }
+
+  .about,
+  .contact-info {
+    margin: 50px auto;
+    width: 65%;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #205c2a;
+  }
 }
